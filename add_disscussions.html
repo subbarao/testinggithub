@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.caregeneral.net/" />
+<title>add_disscussions</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">add_disscussions</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=select-patient</td>
+	<td>label=William</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Discussions')])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=modal_new_discussion_form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.modal-header &gt; h2</td>
+	<td>create discussion</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=label.control-label.col-sm-4</td>
+	<td>Title</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=discussion_title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='new_discussion']/div[2]/div/div[2]/label</td>
+	<td>Description</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=discussion_description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=upload-file-link</td>
+	<td>Attach a file</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.col-md-10.col-md-offset-2 &gt; div.col-sm-3</td>
+	<td>Share With</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=a.btn-next &gt; span</td>
+	<td>submit</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=discussion_title</td>
+	<td>Allergy</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=a.btn-next &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=html body.discussions_page.user_loggined div.wrapper div#main.container_fluid div.row div.col-md-12 section.reports_content div div.alert.fade.in.alert-success.alert-dismissable</td>
+	<td>×Discussion was successfully created.</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=i.icon-remove</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure you want to delete Allergy?</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
